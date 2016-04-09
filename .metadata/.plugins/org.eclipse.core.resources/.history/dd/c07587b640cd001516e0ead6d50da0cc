@@ -1,0 +1,27 @@
+package com.ds.arrays;
+
+public class FindPairsInArrayEqualsSum {
+
+	
+	public void printPairs(int sum,int array[]){
+		
+		int first = 0;
+		int last = array.length-1;
+		
+		while(first < last){
+			int s = array[first] + array[last];
+			if(s==sum){
+				System.out.println("("+first+", "+last+")");
+			}
+			
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

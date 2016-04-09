@@ -1,0 +1,22 @@
+package com.ds;
+
+import com.ds.GenericLinkedList.Node;
+
+public class BST<Key,Value> {
+
+	
+	private static class Node<Key,Value>{
+		private Key key;
+		private Value value;
+		private Node<Key,Value> next;
+		
+		public Node(T data,Node<T> next){
+			this.data  = data;
+			this.next = next;
+		}
+		
+		public String toString(){
+			return "Current is "+data+" next";
+		}
+	} 
+}

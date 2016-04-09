@@ -1,0 +1,23 @@
+package com.ds;
+
+import com.ds.Stack.Node;
+
+public class Queue<T> {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	private static class Node<T>{
+		T data;
+		Node<T> next ;
+		
+		public Node(T data,Node<T> n)
+		{
+		    this.data = data;
+		    this.next = n;
+		}
+	}
+
+}

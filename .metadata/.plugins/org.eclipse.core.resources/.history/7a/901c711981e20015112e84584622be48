@@ -1,0 +1,40 @@
+package com.ds;
+
+public class BST<Key extends Comparable<Key>,Value> {
+
+	
+	private static class Node<Key,Value>{
+		private Key key;
+		private Value value;
+		private Node<Key,Value> left;
+		private Node<Key,Value> right;
+		
+		public Node(Key key,Value value){
+			this.key  = key;
+			this.value  = value;
+		}
+		
+	} 
+	
+	
+	private Node root;
+	
+	private void put(Key key,Value val){ 
+		
+	}
+	
+	public Value get(Key key){ 
+		
+		Node x = root;
+		
+		while(x != null){
+			
+			int cmp = key.compareTo((Key) x.key);
+			if(cmp < 0) x = x.left;
+			else if(cmp > 0) x = x.right;
+			else if(cmp == 0) return x.val;
+		}
+	}
+	
+	
+}

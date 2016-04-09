@@ -1,0 +1,12 @@
+package com.ds;
+
+public class Stack<T> {
+	
+	
+	
+	private static class Node<T>{
+		T data;
+		T next = Node<T>;
+	}
+
+}

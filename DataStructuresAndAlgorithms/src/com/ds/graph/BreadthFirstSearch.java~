@@ -1,0 +1,71 @@
+package com.ds.graph;
+
+
+import java.util.ArrayList;
+import sun.misc.Queue;
+
+/**
+ * Created by prasanth on 10/3/16.
+ */
+public class BreadthFirstSearch {
+
+    // mark the visited node
+    private boolean[] marked;
+
+    //to keep track the edge from sourceVertex to Vertex
+    private int[] edgeTo;
+
+    private int s;
+
+    public BreadthFirstSearch(Graph G, int sourceVertex)throws InterruptedException{
+
+        marked = new boolean[G.getV()];
+        edgeTo = new int[G.getV()];
+        s = sourceVertex;
+
+        bfs(G, sourceVertex);
+
+    }
+
+
+
+    private void bfs(Graph G,int sourceVetex)throws InterruptedException{
+
+        Queue<Integer> q = new Queue<Integer>();
+        q.enqueue(sourceVetex);
+        marked[sourceVetex] = true;
+        while(!q.isEmpty()){
+            int v = q.dequeue();
+            ArrayList<Integer> oVertices = G.getVertices()[v];
+            for(int vertice:oVertices){
+                if(!marked[vertice]){
+                   q.enqueue(vertice);
+                    marked[vertice] = true;
+                    edgeTo[vertice] = v;
+                }
+            }
+
+        }
+
+    }
+
+    public boolean hasPathTo(int v){
+        return marked[v];
+    }
+
+
+    public String pathTo(int v){
+
+        if(!hasPathTo(v)) return null;
+
+        StringBuilder path = new StringBuilder();
+
+        for(int x=v;x!=s;x=edgeTo[x])
+            path.append(x).append("-->");
+        path.append(s);
+
+        return path.toString();
+    }
+
+
+}

@@ -1,0 +1,18 @@
+package com.ds;
+
+public class MyQueue {
+
+	private int elements[] = new int[10];
+	
+	private int size = 0;
+
+	
+	public void enqueue(int elem){
+		elements[size++] = elem;
+	}
+	
+	public int dequeue(){
+		elements[size++] = elem;
+	}
+	
+}

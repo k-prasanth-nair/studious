@@ -1,0 +1,29 @@
+package com.ds;
+
+public class MyQueue {
+
+	private int elements[] = new int[10];
+	
+	private int size = 0;
+	
+	private int top = -1;
+	
+
+	
+	public void enqueue(int elem){
+		if(size < elements.length){
+			elements[size++] = elem;
+		}else{
+			System.out.println("Queue is full");
+		}
+			
+	}
+	
+	public int dequeue(){
+		if(top >= rear){
+			elements[size++] = elem;
+		}
+		
+	}
+	
+}
