@@ -1,8 +1,0 @@
-package com.ds;
-
-
-public class MyStack {
-	
-	private int array[] = new int[10];
-
-}
